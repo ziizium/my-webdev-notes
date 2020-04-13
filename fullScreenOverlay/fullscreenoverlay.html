@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8">
+	<title>Fullscreen Overlay Navigation</title>
+	<link rel="stylesheet" href="nojs.css">
+</head>
+<body>
+	<div class="top">
+		<header class="header">
+			<h1 class="header__name"><a href="index.html">Alice & Bob&trade;</a></h1>
+			<span class="hambuger__icon" onclick="openNav()">&#9776;</span>
+		</header>
+
+		<nav id="navigation" class="navigation overlay">
+
+			<a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+
+			<ul class="navigation__menu overlay__content">
+				<li class="navigation__item">
+					<a href="#" class="navigation__link">Web Design</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#" class="navigation__link">Graphics Design</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#" class="navigation__link">Contact Us</a>
+				</li>
+				<li class="navigation__item">
+					<a href="#" class="navigation__link">Our Blog</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<script>
+		if (document.getElementById) {
+
+			let link = document.getElementsByTagName('link');
+			let navigation = document.getElementById('navigation');
+			let clientWidth = document.documentElement.clientWidth;
+
+
+			link[0].attributes.href.nodeValue = "styles.css";
+		
+
+			function openNav() {
+				navigation.style.width = "100%";
+			}
+
+			function closeNav() {
+				navigation.style.width = "";
+			}
+
+			window.addEventListener('resize', function() {
+				if (clientWidth > 640) {
+					navigation.style.width = "";
+				}
+			});
+
+		}
+	</script>
+</body>
+</html>
