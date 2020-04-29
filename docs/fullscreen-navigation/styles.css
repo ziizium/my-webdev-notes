@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;	
+}
+
+.top {
+	background-color: #1f2a47;
+	color: #ffffff;
+}
+
+.header {
+	padding: 1.2em;
+}
+
+.header__name {
+	margin-bottom: 0.5em;
+	font-weight: 700;
+	color: #ffffff;
+	text-align: center;
+}
+
+.header__name a {
+	color: #ffffff;
+}
+
+@media screen and (max-width: 40em) {
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.hambuger__icon {
+		font-size: 30px;
+		cursor: pointer;
+	}
+
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 100%;
+		z-index: 1;
+		background-color: rgba(0,0,0,0.9);
+		overflow-x: hidden;
+		transition: 0.5s
+	}
+
+	.overlay .closebtn {
+		position: absolute;
+		top: 20px;
+		right: 45px;
+		font-size: 60px;
+	}
+
+	.overlay a {
+		display: block;
+		font-size: 2.3em;
+		padding: 8px;
+		color: #818181;
+		text-decoration: none;
+		transition: 0.3s;
+	}
+
+	.overlay a:hover,
+	.overlay a:focus {
+		color: #f1f1f1;
+	}
+	
+
+	.overlay__content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		margin-top: 30px;
+		text-align: center;
+	}
+
+}
+
+@media screen and (max-height: 28em) {
+	.overlay a {
+		font-size: 20px;
+	}
+
+	.overlay .closebtn {
+		font-size: 40px;
+		top: 15px;
+		right: 35px;
+	}
+}
+
+@media screen and (min-width: 40.01em) {
+
+	.closebtn,
+	.hambuger__icon {
+		display: none;
+	}
+	
+	.navigation__link {
+		display: block;
+		padding: 0.8em 1em;
+		font-weight: normal;
+		color: #ffffff;
+	}
+
+	.navigation__item:not(:first-child) {
+		border-top: 1px solid #ccc;
+	}
+
+	.navigation__link:hover {
+		background-color: #06162f;
+		color: #ffffff;
+	}
+
+	.navigation__menu {
+		margin-top: 1.2em;
+		border: 1px solid #cccccc;
+	}
+
+	@supports (display: grid) {
+		.navigation__menu {
+			display: grid;
+			grid-template-areas: "h1 h2" "h3 h4";
+		}
+		.navigation__item:nth-child(2) {
+			border-top: none;
+		}
+	}
+
+}
+
+@media screen and (min-width: 55em) {
+	.top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.navigation__menu {
+		display: flex;
+		border: none;
+		margin-right: 4em;
+	}
+
+	.navigation__link {
+		margin-right: 20px;
+	}
+
+	.navigation__item:not(:first-child) {
+		border-top: none;
+	}
+}
