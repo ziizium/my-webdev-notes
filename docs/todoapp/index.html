@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<title>TO DO List</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="body">
+
+	<noscript style="padding: 0.5em; text-align: center; font-size: 1.2em;">
+		<p>This application works best with JavaScript enabled in your browser.</p>
+	</noscript>
+
+	<header class="header" id="header">
+		<div class="header__inner">
+			<h2><a href="index.html">To Do List</a></h2>
+			<form>
+				<label class="changeTheme" id="changeTheme-js">
+					<input type="checkbox" id="changeTheme" class="changeTheme__input">
+					<div class="changeTheme__slider round"></div>
+				</label>
+			</form>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="row">
+
+			<div class="form-instruction" id="form-instruction">
+				<em>The following are allowed: letters, numbers, commas, apostrophes, hyphens, question marks, and spaces</em>
+			</div>
+
+			<form class="taskForm">
+				<label for="taskForm__input" class="taskForm__label visuallyHidden">Enter TO DO</label>
+				<input type="text" id="taskForm__input" placeholder="Enter your task name" class="taskForm__input">
+				<input id="taskForm__submitInput" type="submit" name="addTask" value="Add Task" class="taskForm__submitInput">
+			</form>
+
+		</div>
+
+		<!-- The tasks will be list items in an un-ordered list-->
+		<ul id="taskList" class="taskList"></ul>
+
+	</main>
+
+	<!-- We require a polyfill for the ChildNode.remove() method which is not
+	supported in IE -->
+	<script src="polyfill.js"></script>
+
+	<script src="tasklist.js"></script>
+
+</body>
+</html>

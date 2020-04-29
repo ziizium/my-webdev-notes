@@ -1,0 +1,309 @@
+/* CSS reset */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f9f9fa;
+}
+
+li {
+	list-style-type: none;
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+	background-color: #1560bd;
+	padding: 30px 40px;
+	color: #fff;
+}
+.header a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/**
+ * By default the content of the .header__inner
+ * class aligned to the center of the container.
+ */
+.header__inner {
+	text-align: center;
+}
+
+/**
+ * In the spirit of progressive enhancement the
+ * .header-js class will be added when the user
+ * has JavaScript enabled in their browser then
+ * we change its display to flex and create space
+ * between the application name and the night mode
+ * toggle swicth.
+ */
+.header-js .header__inner {
+	width: 70vw;
+	display: flex;
+	justify-content: space-between;
+}
+
+/**
+ * The changeTheme class is a night mode toggle switch
+ * and its hidden by default and will be available to
+ * users with JavaScript enabled in their browser
+ */
+.changeTheme {
+	position: relative;
+	display: none;      /* Hide by default */
+	width: 60px;
+	height: 34px;
+}
+
+/**
+ * The .changeTheme-js is added by JavaScript 
+ * Then the toggle swicth is shown.
+ */
+.changeTheme.changeTheme-js {
+	display: inline-block;   /* show the switch */
+}
+
+/**
+ * The toggle switch is actually an HTML form
+ * input that's hidden before we style the slider.
+*/
+.changeTheme__input {
+	display: none;
+}
+
+/**
+ * The toggle switch styles. 
+ */
+.changeTheme__slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #cccccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+	cursor: pointer;
+}
+
+.changeTheme__slider:before {
+	content: "";
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	height: 26px;
+	width: 26px;
+	background-color: #ffffff;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.changeTheme__input:checked + .changeTheme__slider {
+	background-color: #2196F3;
+}
+
+.changeTheme__input:focus + .changeTheme__slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+.changeTheme__input:checked + .changeTheme__slider:before {
+	-webkit-transform: translate(26px);
+	-ms-transform: translate(26px);
+	transform: translate(26px);
+}
+
+/* Rounded sliders */
+.changeTheme__slider.round {
+	border-radius: 34px;
+}
+
+.changeTheme__slider.round:before {
+	border-radius: 50%;
+}
+
+main {
+	display: block; /* A fix that enables IE to render the main tag correctly */
+	width: 70%;
+	margin: 2em auto;
+}
+
+.form-instruction {
+	margin-bottom: 1em;
+	line-height: 1.618;
+	font-size: 1.2em;
+}
+
+.taskForm__input {
+	font-size: 1em;
+	padding: 10px;
+	width: 100%;
+	float: left;
+}
+
+.taskForm__submitInput {
+	font-size: 1em;
+	padding: 11px;
+	margin-top: 1em;
+	background: #d9d9d9;
+	color: #555555;
+	border: none;
+	width: 100%;
+	text-align: center;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 48em) {
+	.taskForm__input {
+		width: 70%;
+	}
+
+	.taskForm__submitInput {
+		width: 23.526%;
+		margin-top: 0;
+		margin-left: 2.17em;  /* align it properly to the edge of its container */
+	}
+}
+
+@media screen and (min-width: 55em) {
+
+	.taskForm {
+		display: flex;
+	}
+
+	.taskForm__submitInput {
+		width: 25%;
+		margin-left: auto;
+	}
+
+}
+
+.taskForm__submitInput:hover {
+	background-color: #bbbbbb;
+}
+
+.taskList {
+	margin-top: 2em;
+}
+
+.taskList li {
+	font-size: 1.125em;
+	position: relative;
+	padding: 12px 8px 12px 40px;
+	margin-bottom: 0.4em;
+	background-color: #eeeeee;
+	transition: 0.2s;
+	cursor: pointer;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+.taskList li:hover {
+	background: #dddddd;
+}
+
+.taskList li.checked {
+	background: #888888;
+	color: #ffffff;
+	text-decoration: line-through;
+}
+
+.taskList li.checked::before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 16px;
+	border-color: #ffffff;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	height: 15px;
+	width: 7px;
+}
+
+.delete-task {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 12px 16px;
+}
+
+.delete-task:hover {
+	background-color: #f44336;
+	color: #ffffff;
+}
+
+.visuallyHidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px;
+  width: 1px; 
+  margin: -1px;
+  padding: 0;
+  border: 0; 
+}
+
+/* Darkmode themes */
+.dark-mode-body {
+	background-color: #0d1219;
+}
+
+.dark-mode-header {
+	background-color: #1a2634;
+}
+
+.dark-mode-form-instruction {
+	color: #ffffff;
+}
+.dark-mode-input {
+	background-color: #2e3a48;
+	border: 1px solid #0d1219;
+	outline: 0;
+}
+.dark-mode-input:focus {
+	color: #ffffff;
+	border-color: #3b49df;
+	box-shadow: 1px 1px 0 #3b49df;
+	background-color: #0d1219;
+}
+
+.dark-mode-input[placeholder] {
+	color: #ffffff;
+}
+
+.dark-mode-slider:checked + .changeTheme__slider {
+	background-color: #26d9ca;
+}
+
+.dark-mode-submitInput {
+	background: #26d9ca;
+	color: #1a1a1a;
+}
+
+.dark-mode-submitInput:hover {
+	background-color: #1eaea2;
+}
+
+.dark-mode-task li {
+	background-color: #1a2634;
+	color: #ffffff;
+}
+
+.dark-mode-task li:hover {
+	background-color: #2b3f56;
+}
+
+.dark-mode-task li.checked {
+	background-color: #2b3f56;
+}
+
+/* End of styles */
