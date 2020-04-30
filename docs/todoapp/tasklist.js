@@ -13,6 +13,18 @@ let removeParent = function (classname) {
 	div.remove();
 };
 
+let taskForm__submitInput = $('#taskForm__submitInput');
+
+/**
+ * By default the submit input is disabled for
+ * users with JavaScript disabled in their
+ * browser because the application is practically useless
+ * without JavaScript.
+ * Therefore when they have JavaScript enabled in their
+ * browser we remove the disabled attribute.
+ */
+taskForm__submitInput.removeAttribute('disabled');
+
 let taskForm__input = $("#taskForm__input");
 
 
@@ -79,7 +91,6 @@ let changeTheme = $("#changeTheme");
 let body = $("#body");
 let header = $('#header');
 let form_instruction = $('#form-instruction');
-let taskForm__submitInput = $('#taskForm__submitInput');
 let changeTheme_js = $('#changeTheme-js')
 
 /**

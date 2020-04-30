@@ -157,6 +157,10 @@ main {
 	cursor: pointer;
 }
 
+.taskForm__submitInput[disabled] {
+	cursor: not-allowed;
+}
+
 @media screen and (min-width: 48em) {
 	.taskForm__input {
 		width: 70%;
@@ -182,7 +186,7 @@ main {
 
 }
 
-.taskForm__submitInput:hover {
+.taskForm__submitInput:hover:not([disabled]) {
 	background-color: #bbbbbb;
 }
 
