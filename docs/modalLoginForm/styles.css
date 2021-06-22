@@ -2,7 +2,8 @@ html {
 	padding: 1em;
 }
 
-a:link {
+a:link,
+a:visited {
         color: #1560bd;
         font-weight: bold;
 }
