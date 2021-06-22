@@ -9,3 +9,4 @@ This repositiory contains code snippets, and links for [series of articles on DE
 * [My WebDev Notes: Fullscreen overlay navigation](https://dev.to/ziizium/my-webdev-notes-fullscreen-overlay-navigation-7gk) published on the 13<sup>th</sup> of April 2020
 * [My WebDev Notes: A simple and accessible accordion](https://dev.to/ziizium/my-webdev-notes-a-simple-and-accessible-accordion-4076) published on 28<sup>th</sup> of April 2020
 * [My WebDev Notes: How to create a tooltip with HTML and CSS](https://dev.to/ziizium/my-webdev-notes-how-to-create-a-tooltip-with-html-and-css-d37) published on 3<sup>rd</sup> February 2021
+* [How to create a modal](https://dev.to/ziizium/how-to-create-a-modal-12bi) published on 22<sup>nd</sup> June 2021
