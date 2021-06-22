@@ -1,0 +1,161 @@
+html {
+	padding: 1em;
+}
+
+a:link {
+        color: #1560bd;
+        font-weight: bold;
+}
+
+a:hover,
+a:focus {
+        outline: 1px solid #1560bd;
+}
+
+main {
+        width: 70%;
+        margin: 0 auto;
+        border: 2px solid #bbb;
+        display:grid;
+        place-items: center;
+        text-align: center;
+        padding:2em;
+}
+
+.button {
+	width: 100%;
+	margin: 8px 0;
+	padding: 14px 20px;
+	color: #ffffff;
+	background-color: #1560bd;
+	border: 0;
+	cursor: pointer;
+}
+
+.modal__content {
+	width: 80vmin;
+	margin: 0 auto 15% auto;
+	border: 1px solid #888888;
+	background-color: #fefefe;
+}
+
+.form__row:first-child {
+	position: relative;
+	text-align: center;
+	margin: 24px 0 12px 0;
+}
+
+.form__avatar {
+	width: 40%;
+	border-radius: 50%;
+}
+
+.closeModal {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	color: #000000;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+	color: red;
+	cursor: pointer;
+}
+
+.form__label {
+	font-weight: bold;
+}
+
+.form__input {
+	display: inline-block;
+	width: 100%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	border: 1px solid #cccccc;
+	box-sizing: border-box;
+}
+
+.cancelModal {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #aaaaaa;
+}
+
+.forgetpassword {
+	padding-top: 16px;
+}
+
+.forgetpassword__link {
+	padding: 0.3em;
+}
+
+.modal__footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+}
+
+.form__row {
+	padding: 16px;
+	overflow: auto;
+}
+
+.modal {
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 1;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 60px;
+        text-align: initial; /* Added at the last minute to rest the text-align set on main tag */
+}
+
+@media screen and (max-width: 30em) {
+	.cancelModal,
+	.forgetpassword {
+		width: 100%;
+	}
+
+	.forgetpassword__link {
+		display: block;
+		padding: 10px;
+		outline: 1px solid #1560bd;
+		text-align: center;
+		text-decoration: none;
+	}
+}
+
+.openModal {
+	width: auto;
+}
+
+.animate {
+	-webkit-animation: zoomit 0.6s;
+	animation: zoomit 0.6s;
+}
+
+@-webkit-keyframes zoomit {
+	from {
+		-webkit-transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes zoomit {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}

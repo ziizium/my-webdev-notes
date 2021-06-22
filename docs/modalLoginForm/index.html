@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Modal login form</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<main>
+                <a href="#">[Code is available on GitHub]</a>
+		<h2>Modal Login form</h2>
+
+
+		<button id="openModal" class="button openModal">Open Modal</button>
+
+		<div id="modal" class="modal">
+			<form class="form modal__content animate" action="">	
+				<div class="form__row">
+					<span id="closeModal" class="closeModal" title="Close Modal">&times;</span>
+					<img src="profile.png" alt="Avatar" class="form__avatar" width="300px">
+				</div>
+
+				<div class="form__row">
+					<label for="username" class="form__label">Username</label>
+					<input id="username" type="text" placeholder="Enter your user name" name="username" required class="form__input">
+
+					<label for="password" class="form__label">Password</label>
+					<input id="password" type="password" placeholder="Enter your password" name="password" required class="form__input">
+
+					<button class="button" type="submit">Login</button>
+				</div>
+
+				<div class="form__row modal__footer">
+					<button type="button" id="cancelModal" class="button cancelModal">Cancel</button>
+					<span class="forgetpassword"><a class="forgetpassword__link" href="#">Forget password?</a></span>
+				</div>
+			</form>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
